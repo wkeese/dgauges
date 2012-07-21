@@ -13,6 +13,7 @@ define(["dojo/_base/lang", "dojo/_base/declare", "dojo/dom-geometry", "dijit/reg
 		//		- A GFX drawing functions typically used for defining the style of the gauge.
 		//		- A scale: CircularScale or RectangularScale depending on the type of gauge.
 		//		- A text, using the TextIndicator
+		//
 		//		Note: Indicator classes (value indicators, range indicators) are sub-elements of scales
 		//		To create a custom gauge, subclass CircularGauge or RectangularGauge and
 		//		configure its elements in the constructor.
@@ -136,9 +137,12 @@ define(["dojo/_base/lang", "dojo/_base/declare", "dojo/dom-geometry", "dijit/reg
 			//		This parameter can be:
 			//
 			//		- A function which takes on argument of type GFX Group and return null or a
+			//
 			//		GFX element retrievable using the getElementRenderer() method.
+			//
 			//		- A Scale instance, i.e. CircularScale or RectangularScale.
 			//		- A TextIndicator instance.
+
 			if(this._elementsIndex[name] && this._elementsIndex[name] != element){
 				this.removeElement(name);
 			}
